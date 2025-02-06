@@ -26,12 +26,12 @@ const PasswordIcon = (
     viewBox="0 0 24 24"
   >
     <path
-      fill="none"
-      stroke="#fff"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="1.5"
-      d="M8 10V8c0-2.761 1.239-5 4-5c2.094 0 3.313 1.288 3.78 3.114M3.5 17.8v-4.6c0-1.12 0-1.68.218-2.107a2 2 0 0 1 .874-.875c.428-.217.988-.217 2.108-.217h10.6c1.12 0 1.68 0 2.108.217a2 2 0 0 1 .874.874c.218.428.218.988.218 2.108v4.6c0 1.12 0 1.68-.218 2.108a2 2 0 0 1-.874.874C18.98 21 18.42 21 17.3 21H6.7c-1.12 0-1.68 0-2.108-.218a2 2 0 0 1-.874-.874C3.5 19.481 3.5 18.921 3.5 17.8m8.5-2.05v-.5m4 .5v-.5m-8 .5v-.5"
+      fill = "none"
+      stroke = "#fff"
+      strokeLinecap = "round"
+      strokeLinejoin = "round"
+      strokeWidth = "1.5"
+      d = "M8 10V8c0-2.761 1.239-5 4-5c2.094 0 3.313 1.288 3.78 3.114M3.5 17.8v-4.6c0-1.12 0-1.68.218-2.107a2 2 0 0 1 .874-.875c.428-.217.988-.217 2.108-.217h10.6c1.12 0 1.68 0 2.108.217a2 2 0 0 1 .874.874c.218.428.218.988.218 2.108v4.6c0 1.12 0 1.68-.218 2.108a2 2 0 0 1-.874.874C18.98 21 18.42 21 17.3 21H6.7c-1.12 0-1.68 0-2.108-.218a2 2 0 0 1-.874-.874C3.5 19.481 3.5 18.921 3.5 17.8m8.5-2.05v-.5m4 .5v-.5m-8 .5v-.5"
     />
   </svg>
 );
@@ -44,13 +44,13 @@ const LoginPage = () => {
         <div className="w-[150px] h-1 bg-white mb-64 mr-[140px]"></div>
         <div className="absolute inset-0">
           <img
-            src="/images/background-login.png"
-            alt="background-login"
-            className="w-full h-full object-cover opacity-30"
+            src = "/images/background-login.png"
+            alt = "background-login"
+            className = "w-full h-full object-cover opacity-30"
           />
         </div>
       </div>
-      <div className="flex gap-4 mb-4 absolute top-0 mt-64 ml-64 ">
+      <div className ="flex gap-4 mb-4 absolute top-0 mt-64 ml-64 ">
           <SocialButton Icon={FaFacebookF} />
           <SocialButton Icon={FaTwitter} />
           <SocialButton Icon={FaGoogle} />
@@ -64,7 +64,7 @@ const LoginPage = () => {
           height="700"
           viewBox="0 0 24 24"
         >
-          <path fill="#1b0d6c" d="M13.5 15.808L9.692 12L13.5 8.192z" />
+          <path fill="#1b0d6c" d = "M13.5 15.808L9.692 12L13.5 8.192z" />
         </svg>
       </div>
 
@@ -91,7 +91,7 @@ const LoginPage = () => {
 
         <div className="flex justify-between w-[94%] px-4 pb-12 text-sm text-gray-300">
           <label className="flex items-center text-lg mr-10">
-            <input type="checkbox" className="mr-2 w-6 h-6 " />
+            <input type="checkbox" className ="mr-2 w-6 h-6 " />
             Remember Me
           </label>
 
@@ -107,7 +107,7 @@ const LoginPage = () => {
     height="24"
     viewBox="0 0 24 24"
   >
-    <g fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="1.5">
+    <g fill="none" stroke = "#fff" strokeLinecap="round" strokeWidth="1.5">
       <path strokeLinejoin="round" d="M2.001 11.999h14m0 0l-3.5-3m3.5 3l-3.5 3"/>
       <path d="M9.002 7c.012-2.175.109-3.353.877-4.121C10.758 2 12.172 2 15 2h1c2.829 0 4.243 0 5.122.879C22 3.757 22 5.172 22 8v8c0 2.828 0 4.243-.878 5.121C20.242 22 18.829 22 16 22h-1c-2.828 0-4.242 0-5.121-.879c-.768-.768-.865-1.946-.877-4.121"/>
     </g>
@@ -120,8 +120,8 @@ const LoginPage = () => {
 };
 
 const SocialButton = ({ Icon }: any) => (
-  <button className="px-3 py-3 border-[#a59ae7] border-2 shadow-[0_4px_6px_rgba(255,255,255,0.5)] hover:bg-gray-300 mt-60 bg-[#82365c] text-white">
-    <Icon size={20} />
+  <button className = "px-3 py-3 border-[#a59ae7] border-2 shadow-[0_4px_6px_rgba(255,255,255,0.5)] hover:bg-gray-300 mt-60 bg-[#82365c] text-white">
+    <Icon size = {20}/>
   </button>
 );
 

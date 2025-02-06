@@ -14,7 +14,7 @@ const holiday: Holidays[] = [
   {
     Holiday_Name: "New Year’s day",
     Holiday_Type: "Public holiday",
-    Start_Date: "01 Jan 202",
+    Start_Date: "01 Jan 2025",
     End_Date: "01 Jan 2025",
   },
   {

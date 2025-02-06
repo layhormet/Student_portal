@@ -2,13 +2,17 @@
 import { useState } from "react";
 import Image from "next/image";
 import ButtonContent from "../src/components/Button/ButtonContent";
+import { count } from "console";
 
 export default function LeaveRequestForm() {
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
+  const [startDate, setStartDate] = useState(" ");
+  const [endDate, setEndDate] = useState(" ");
   const [leaveType, setLeaveType] = useState("Full day");
   const [leaveDays, setLeaveDays] = useState(0);
-  const [reason, setReason] = useState("");
+  const [reason, setReason] = useState(" ");
+
+
+
 
   const calculateLeaveDays = (start: string, end: string) => {
     if (start && end) {
@@ -22,7 +26,7 @@ export default function LeaveRequestForm() {
   return (
     <div className="p-6">
       <div className="mb-4">
-        <ButtonContent title="Request For Leaves" />
+        <ButtonContent title="Request For Leaves"/>
       </div>
 
       <div className="max-w-4xl mx-auto p-8 bg-white shadow-xl rounded-lg border">
@@ -41,7 +45,7 @@ export default function LeaveRequestForm() {
                     setStartDate(e.target.value);
                     calculateLeaveDays(e.target.value, endDate);
                   }}
-                  className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                  className="w-full p-2 boder rounded-md focus:ring-2 focus:ring-purple-500"
                 />
               </div>
               <div>
@@ -61,7 +65,7 @@ export default function LeaveRequestForm() {
             {/* Leave Type & Days */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold">Leave Type</label>
+                <label className="block text-sm font-semibold"> Leave Type </label>
                 <select
                   value={leaveType}
                   onChange={(e) => setLeaveType(e.target.value)}
@@ -78,20 +82,20 @@ export default function LeaveRequestForm() {
                   type="text"
                   value={leaveDays}
                   readOnly
-                  className="w-full p-2 border rounded-md bg-gray-100"
+                  className="w-full p-2 boder rounded-md bg-gray-100"
                 />
               </div>
             </div>
 
             {/* Reason Input */}
             <div>
-              <label className="block text-sm font-semibold">Reason</label>
+              <label className="block text-sm font-semibold"> Reason </label>
               <textarea
                 value={reason}
                 onChange={(e) => setReason(e.target.value)}
                 className="w-full p-3 border rounded-md focus:ring-2 focus:ring-purple-500"
                 rows={4}
-                placeholder="Enter your reason..."
+                placeholder="Enter Your Reason....."
               />
             </div>
           </div>
@@ -108,8 +112,8 @@ export default function LeaveRequestForm() {
           </div>
         </div>
 
-        <div className="flex justify-end mt-8 space-x-4">
-          <button className="px-6 py-2 border rounded-md text-gray-600 hover:bg-gray-200 transition">
+        <div className = "flex justify-end mt-8 space-x-4">
+          <button className = "px-6 py-2 border rounded-md text-gray-600 hover:bg-gray-200 transition">
             Cancel
           </button>
           <button className="px-6 py-2 bg-purple-700 text-white rounded-md hover:bg-purple-800 transition">
@@ -119,6 +123,8 @@ export default function LeaveRequestForm() {
       </div>
     </div>
   );
+
+  
 }
 
 

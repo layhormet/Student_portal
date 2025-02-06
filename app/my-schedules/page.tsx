@@ -123,7 +123,7 @@ const SchedulePage: React.FC = () => {
           </h2>
         </div>
       </div>
-      <div className="mt-4 overflow-x-auto">
+      <div className="met-4 overflow-x-auto">
         <table className="w-full border border-gray-300 text-sm text-center">
           <thead>
             <tr className="bg-[#a9bfdc]">

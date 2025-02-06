@@ -24,11 +24,10 @@ const CoursesTable: React.FC = () => {
       <Table
         title="Current Courses"
         titleClassName="h-12 pl-4 font-bold"
-        headers={coursesHeaders}
-        className="w-full border-b-2 border-gray-300"
-        rows={coursesRows}
+        headers = {coursesHeaders}
+        className = "w-full border-b-2 border-gray-300"
+        rows = {coursesRows}
       />
-
       <Table
         title="Absences"
         titleClassName="h-12 pl-4 font-bold"

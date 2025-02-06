@@ -14,7 +14,7 @@ export default function RootLayout({
   const isLoginPage = pathname === '/';
 
   return (
-    <html lang="en">
+    <html lang = "en">
       <body>
         {isLoginPage ? (
           

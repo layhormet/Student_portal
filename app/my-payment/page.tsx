@@ -107,14 +107,20 @@ const PaymentTable: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
 
+  const [selectedPayment, setSelectedPayment] = useState<Payment | null>(null);
+  const [filterTerm, setFilterTerm] = useState(" ");
+  const [filterMajor, setFilterMajor] = useState(" ");
+  const [filterLevel, setFilterLevel] = useState(" ");
+
   const handleYearSelect = (year: number) => {
     setSelectedYear(year);
     setIsOpen(false); // Close the dropdown after selection
     // Add any filtering logic you want here based on the selected year
   };
 
-  const years = [2020, 2021, 2022, 2023, 2024];
+  const years = [2023, 2024, 2025, 2026, 2027];
 
+  
   return (
     <div className="p-6">
       <div className="flex justify-between mb-1">
@@ -126,7 +132,7 @@ const PaymentTable: React.FC = () => {
               onChange={(date) => setStartDate(date)}
               ref={startDateRef}
               className="w-full px-4 py-2 bg-[#FFF9F9] border border-gray-300 rounded-md shadow-sm text-black placeholder-black font-sm"
-              placeholderText="Start Date"
+              placeholderText = "Start Date"
             />
             <CalendarDays
               className="absolute right-3 top-2 text-black cursor-pointer"
@@ -151,7 +157,7 @@ const PaymentTable: React.FC = () => {
             className="flex items-center justify-between w-40 px-4 py-2 bg-[#FFF9F9] border border-gray-300 rounded-md shadow-sm text-gray-700 font-medium"
           >
             {selectedYear ? selectedYear : "Year"}
-            <ListFilter className="w-5 h-5" />
+            <ListFilter className="w-5 h-5"/>
           </button>
 
           {isOpen && (
@@ -175,14 +181,14 @@ const PaymentTable: React.FC = () => {
       <table className="min-w-full border-collapse mb-6">
         <thead>
           <tr className="bg-[#1b0d6c]">
-            <th className=" text-white px-6 py-6">Term</th>
-            <th className=" text-white px-6 py-6">Major</th>
-            <th className=" text-white px-6 py-6">Level</th>
-            <th className=" text-white px-6 py-6">Campus</th>
-            <th className=" text-white px-6 py-6">Method</th>
-            <th className=" text-white px-6 py-6">Amount</th>
-            <th className=" text-white px-6 py-6">Payment Date</th>
-            <th className=" text-white px-6 py-6">Status</th>
+            <th className=" text-white px-6 py-6 ">Term</th>
+            <th className=" text-white px-6 py-6 ">Major</th>
+            <th className=" text-white px-6 py-6 ">Level</th>
+            <th className=" text-white px-6 py-6 ">Campus</th>
+            <th className=" text-white px-6 py-6 ">Method</th>
+            <th className=" text-white px-6 py-6 ">Amount</th>
+            <th className=" text-white px-6 py-6 ">Payment Date</th>
+            <th className=" text-white px-6 py-6 ">Status</th>
           </tr>
         </thead>
         <tbody>

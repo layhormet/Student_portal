@@ -2,6 +2,7 @@ import React from "react";
 import ButtonContent from "../src/components/Button/ButtonContent";
 import { ListFilter } from "lucide-react";
 import Image from "next/image";
+import { count } from "console";
 
 interface AcademicHistoryProps {
   name: string;
@@ -45,11 +46,11 @@ const AcademicHistory: React.FC<AcademicHistoryProps> = ({
         <div className="flex justify-between gap-4">
           <button className="flex items-center justify-between w-40 px-4 py-2 bg-[#FFF9F9] border border-gray-300 rounded-md shadow-sm text-gray-700 font-medium">
             Year
-            <ListFilter className="w-5 h-5 " />
+            <ListFilter className="w-5 h-5"/>
           </button>
           <button className="flex items-center justify-between w-40 px-4 py-2 bg-[#FFF9F9] border border-gray-300 rounded-md shadow-sm text-gray-700 font-medium">
             Semester
-            <ListFilter className="w-5 h-5 " />
+            <ListFilter className="w-5 h-5"/>
           </button>
         </div>
       </div>
